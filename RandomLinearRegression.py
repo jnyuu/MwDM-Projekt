@@ -36,21 +36,18 @@ def linear_regression(X, y):
     print("Intercept:", intercept)
     return([slope,intercept])
 
+# apply linear regression
 result = linear_regression(X,y)
-
 x_values = np.linspace(0, 2, 100) 
-
 y_values = result[0] * x_values + result[1]
 
 plt.figure(figsize=(8, 5))
 plt.plot(x_values, y_values,color='red')
-
 plt.scatter(X, y, color='blue', label='Data points')
 plt.title('Linear Regression Example from Scratch')
 plt.xlabel('X')
 plt.ylabel('y')
 plt.legend()
 plt.show()
-
 
 # https://www.voxco.com/blog/how-can-you-calculate-linear-regression/
